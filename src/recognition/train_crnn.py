@@ -1,5 +1,7 @@
 import tensorflow as tf
-from tensorflow.keras import layers
+from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D
+
+from keras import layers
 import os
 from src.utils.data_generator import DataGenerator
 
