@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# TensorFlow or Keras model files
+*.h5
+*.hdf5
+*.pb
+
+# Dataset files
+data/train/
+data/test/
+data/validation/
+data/labels/
+
+# Model logs and checkpoints
+models/
+*.ckpt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Python cache files
+*.log
+*.csv
+*.sqlite3
+*.db
+
+# Ignore results folder
+results/
+
+# IDE related
+.idea/
+.vscode/
+
+# Pip dependency file
+pip-wheel-metadata/
