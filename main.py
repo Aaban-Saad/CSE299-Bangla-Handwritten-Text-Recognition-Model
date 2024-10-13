@@ -1,5 +1,5 @@
 import os
-from src.recognition.train_crnn import train_model
+from train import train_model
 from src.word_segmentation.segment import word_segmentation
 from src.data_preprocessing.preprocess import preprocess_image
 

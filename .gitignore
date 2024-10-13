@@ -18,6 +18,7 @@ env/
 *.pb
 
 # Dataset files
+data/*
 data/train/
 data/test/
 data/validation/
