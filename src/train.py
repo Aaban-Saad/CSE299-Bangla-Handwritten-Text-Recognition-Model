@@ -80,13 +80,13 @@ def train_model(data_dir):
     model = build_model(len(label_map))
 
     # Train the model
-    model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=5, batch_size=32)
+    model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=3, batch_size=24)
 
     return model, label_map
 
 
 if __name__ == "__main__":
-    data_directory = '../data/'  # Update this path to your dataset
+    data_directory = '../data/train'  # Update this path to your dataset
     model, labels = train_model(data_directory)
     model.save('../models/aaban.keras')
     print("Training completed. Label mapping:", labels)
