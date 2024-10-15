@@ -114,6 +114,6 @@ input_string = input_text = open('unique_words.txt', 'r', encoding='utf-8').read
 font_paths = ["../custom font/AabanLipi.ttf", '../custom font/1.ttf', '../custom font/2.ttf', '../custom font/3.ttf', '../custom font/4.ttf', '../custom font/5.ttf', '../custom font/../custom font/6.ttf', '../custom font/7.ttf', '../custom font/8.ttf', '../custom font/9.ttf', '../custom font/10.ttf', '../custom font/11.ttf', '../custom font/12.ttf', '../custom font/13.ttf', '../custom font/14.ttf', '../custom font/15.ttf', '../custom font/16.ttf', '../custom font/17.ttf', '../custom font/18.ttf', '../custom font/19.ttf', '../custom font/20.ttf', '../custom font/21.ttf']
 output_folder = "../data/train"  # Specify your output folder here
 
-for i in range(700):
+for i in range(3000):
     save_words_as_images(input_string, font_path=random.choice(font_paths), output_folder=output_folder)
     print(i)

@@ -35,11 +35,14 @@ def build_model(num_classes):
     model = models.Sequential()
     model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 128, 3)))
     model.add(layers.MaxPooling2D((2, 2)))
+    
     model.add(layers.Conv2D(64, (3, 3), activation='relu'))
     model.add(layers.MaxPooling2D((2, 2)))
+    
     model.add(layers.Conv2D(64, (3, 3), activation='relu'))
     model.add(layers.Flatten())
     model.add(layers.Dense(64, activation='relu'))
+    
     model.add(layers.Dense(num_classes, activation='softmax'))  # Output layer
 
     model.compile(optimizer='adam',
@@ -84,9 +87,14 @@ def train_model(data_dir):
 
     return model, label_map
 
-
+def save_to_file(file_path, content):
+    # Save the content to a text file
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(content)
+        
 if __name__ == "__main__":
     data_directory = '../data/train'  # Update this path to your dataset
     model, labels = train_model(data_directory)
     model.save('../models/aaban.keras')
     print("Training completed. Label mapping:", labels)
+    save_to_file("../data/labels.txt", str(labels))
