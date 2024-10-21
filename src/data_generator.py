@@ -229,5 +229,5 @@ for i in range(2700):
 # output_folder = "../data/train"
 
 # # Generate images in parallel, in batches, while limiting memory usage
-# save_words_as_images_parallel(input_string, font_paths, output_folder, batch_size=100, max_workers=4)
+# save_words_as_images_parallel(input_string, font_paths, output_folder, batch_size=1000, max_workers=4)
 
