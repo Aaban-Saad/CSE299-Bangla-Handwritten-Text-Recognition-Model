@@ -56,6 +56,9 @@ def test_model(model_path, test_data_dir):
 
     plt.tight_layout()
     plt.show()
+    plt.savefig("predictions_output.png")  # Save to a file
+
+    print(y_pred_classes)
 
 if __name__ == "__main__":
     model_path = '../models/aaban.keras'  # Path to the saved model
