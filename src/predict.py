@@ -58,6 +58,14 @@ def test_model(model_path, test_data_dir):
     plt.show()
     plt.savefig("predictions_output.png")  # Save to a file
 
+
+    # Print labels
+    with open('../models/labels.txt', 'r') as file:
+        # Read the file contents
+        contents = file.read()
+        # Print the contents
+        print(contents)
+
     print(y_pred_classes)
 
 if __name__ == "__main__":

@@ -99,6 +99,7 @@ import cv2
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
+import json
 
 # from sklearn.model_selection import train_test_split
 
@@ -189,9 +190,17 @@ def train_model(data_dir, batch_size=32, epochs=3):
 
     return model, label_map
 
+
+
 if __name__ == "__main__":
     data_directory = '../data/train'  # Update this path to your dataset
     model, labels = train_model(data_directory)
     model.save('../models/aaban.keras')
-    print("Training completed. Label mapping:", labels)
+    
+    # Save labels to a JSON file
+    with open('../models/labels.json', 'w') as f:
+        json.dump(labels, f)
+    
+    print("Training completed. Label mapping saved to 'labels.json':", labels)
+
 
