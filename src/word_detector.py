@@ -110,7 +110,7 @@ def detect_words_mser(image_path, output_path="output_mser.jpg", crop_output_dir
 
 
             canvas_width, canvas_height = 128, 32
-            target_width, target_height = 128, 32
+            target_width, target_height = 125, 28
             padded_word = np.ones((canvas_height, canvas_width, 3), dtype=np.uint8) * 255
 
             # Calculate aspect ratio and resize while preserving it
