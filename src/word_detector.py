@@ -91,23 +91,26 @@ def detect_words_mser(image_path, output_path="output_mser.jpg", crop_output_dir
             # Draw rectangle on the original image for visualization
             # cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
-            # Check black pixel percentage in the top 20 pixels of the cropped word
-            top_20_pixels = cropped_word[:h//5, :]
-            # Count pixels as black if their values are less than or equal to 20
-            black_pixel_count = np.sum(np.all(top_20_pixels <= [20, 20, 20], axis=2))
+            # # Check black pixel percentage in the top 20 pixels of the cropped word
+            # top_20_pixels = cropped_word[:h//5, :]
+            # # Count pixels as black if their values are less than or equal to 20
+            # black_pixel_count = np.sum(np.all(top_20_pixels <= [20, 20, 20], axis=2))
 
-            total_pixels = top_20_pixels.shape[0] * top_20_pixels.shape[1]
-            black_pixel_percentage = (black_pixel_count / total_pixels) * 100
-            print(black_pixel_percentage, h//10)
+            # total_pixels = top_20_pixels.shape[0] * top_20_pixels.shape[1]
+            # black_pixel_percentage = (black_pixel_count / total_pixels) * 100
+            # print(black_pixel_percentage, h//10)
 
-            # Adjust canvas size and target dimensions based on black pixel percentage
-            if black_pixel_percentage > 10:
-                canvas_width, canvas_height = 132, 28
-                target_width, target_height = 120, 15
-            else:
-                canvas_width, canvas_height = 128, 32
-                target_width, target_height = 120, 22
+            # # Adjust canvas size and target dimensions based on black pixel percentage
+            # if black_pixel_percentage > 10:
+            #     canvas_width, canvas_height = 132, 28
+            #     target_width, target_height = 120, 15
+            # else:
+            #     canvas_width, canvas_height = 128, 32
+            #     target_width, target_height = 120, 22
 
+
+            canvas_width, canvas_height = 128, 32
+            target_width, target_height = 128, 32
             padded_word = np.ones((canvas_height, canvas_width, 3), dtype=np.uint8) * 255
 
             # Calculate aspect ratio and resize while preserving it
