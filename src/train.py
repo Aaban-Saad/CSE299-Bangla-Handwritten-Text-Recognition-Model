@@ -177,7 +177,7 @@ def build_model(num_classes):
                   metrics=['accuracy'])
     return model
 
-def train_model(data_dir, batch_size=32, epochs=3):
+def train_model(data_dir, batch_size=32, epochs=4):
     # Load label map
     label_map = load_label_map(data_dir)
 
