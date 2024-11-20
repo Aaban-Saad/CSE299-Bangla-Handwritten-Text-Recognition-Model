@@ -161,7 +161,7 @@ font_paths = ["../custom font/AabanLipi.ttf",
                                         ]
 output_folder = "../data/train"  # Specify your output folder here
 
-for i in range(2700):
+for i in range(200):
     print("->")
     save_words_as_images(input_string, font_path=random.choice(font_paths), output_folder=output_folder)
     print(i)
